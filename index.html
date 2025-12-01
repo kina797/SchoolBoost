@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>登校クエスト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🏫 登校クエスト</h1>
+
+      <div id="status-text" class="status">位置情報を取得中...</div>
+
+      <button id="checkin-btn">🎁 チェックイン！</button>
+
+      <div id="gacha-machine" style="display: none">
+        <div id="gacha-body">
+          <div id="gacha-handle-container">
+            <div id="gacha-handle">
+              <div id="handle-bar"></div>
+            </div>
+            <span class="tap-text">タップ</span>
+          </div>
+        </div>
+        <p class="gacha-text">レバーをタップして回そう！</p>
+      </div>
+
+      <div id="result-area">
+        <span class="item-icon" id="item-icon">❓</span>
+        <div class="item-name" id="item-name">アイテム名</div>
+        <p>登校ありがとうございます！</p>
+      </div>
+
+      <div id="collection-container">
+        <h2>🎒 持ち物リスト</h2>
+        <div id="collection-list">
+          <p class="empty-msg">まだ何も持っていません</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry&callback=initApp"
+    ></script>
+  </body>
+</html>
